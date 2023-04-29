@@ -77,7 +77,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <div className="logo">
             <Link href={"/"}>
               <Image
-                src="/logo.svg"
+                src="/logo/logo.svg"
                 height={150}
                 width={150}
                 alt="logo"
