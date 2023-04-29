@@ -1,14 +1,19 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Rubik } from '@next/font/google'
+import { Outfit, Paytone_One } from '@next/font/google'
 import { useEffect, useRef, useState } from 'react'
 import Scroll from '@/components/Scrollbar'
 import Image from 'next/image'
 import AnimatedLoader from '@/components/AnimatedLoader'
 import Link from 'next/link'
-const rubik = Rubik({
-  variable: '--font-rubik',
+const outfit = Outfit({
+  variable: '--font-outfit',
   subsets: ['latin']
+})
+const paytone = Paytone_One({
+  weight: "400",
+  variable: "--font-paytone",
+  subsets: ["latin"]
 })
 export default function App({ Component, pageProps }: AppProps) {
   const trailer = useRef<HTMLDivElement>(null);
@@ -55,7 +60,7 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }
   return (
-    <main className={`${rubik.variable} font-sans container mx-auto  cursor-none pb-3`}>
+    <main className={`${outfit.variable} ${paytone.variable} font-sans container mx-auto  cursor-none pb-3`}>
       <div ref={trailer} className={`trailer h-8 w-8 ${interacting ? 'bg-white/50' : 'bg-white'}  fixed z-[10000] top-0 left-0 rounded-full pointer-events-none opacity-0 transition-opacity  duration-500  ease-in  flex items-center justify-center`}>
         <div className={`icon text-black ${interacting ? 'opacity-100' : 'opacity-0'}`}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -98,3 +103,4 @@ export default function App({ Component, pageProps }: AppProps) {
     </main>
   )
 }
+

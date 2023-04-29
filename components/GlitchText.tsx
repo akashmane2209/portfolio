@@ -25,7 +25,7 @@ const GlitchText = ({ text }: { text: string }) => {
 	}, []);
 
 	return (
-		<p ref={ref} onMouseOver={glitchText} className='text-6xl font-semibold uppercase inline-block'>{`${text} `}</p>
+		<p ref={ref} onMouseOver={glitchText} className='text-6xl font-heading font-semibold uppercase inline-block'>{`${text} `}</p>
 	)
 }
 

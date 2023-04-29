@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 import TextComponent from '@/components/TextComponent'
 import GlitchText from '@/components/GlitchText'
 
-
-
 export default function Home() {
 
   const START_DATE = new Date('11-01-2019')
@@ -55,9 +53,9 @@ export default function Home() {
                 March 2022 - Present
               </p>
             </div>
-            <p>
+            <p className='text-gray-700 text-sm'>
               Worked with observability team to contribute to open source project - Hypertrace. Added custom dashboards feature to the platform and took full ownership of the same. Conducted <span className='uppercase'>FGDs</span>, created tech spec, figma designs and delivered the feature before deadline. Currently used by Razorpay devs to monitor merchants dashboards during high load durations such as sales, cricket matches, etc </p>
-            <p className='mt-3'>
+            <p className='mt-3 text-gray-700 text-sm'>
               Currently working with corporate cards team to help onboard new customers by simplifying the onboarding flow.
             </p>
           </div>
@@ -68,7 +66,7 @@ export default function Home() {
                 November 2019 - March 2022
               </p>
             </div>
-            <p className='whitespace-pre-line'>
+            <p className='whitespace-pre-line text-gray-700 text-sm'>
               Worked on building a fully fledged e-commerce platform to help offline merchants setup their online store in few clicks.
               Developed a CLI tool to help indie developers created themes and extensions for the platform
               Build a realtime theme editor to allow users to customise the look and feel of their website
